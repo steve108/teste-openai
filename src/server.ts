@@ -9,8 +9,12 @@ const start =async () => {
     await app.register(cors);
     await app.register(routes);
 
+    var port = process.env.PORT || 5000;
+
     try{
-        await app.listen(process.env.PORT || 5000)
+        await app.listen(port, "0.0.0.0", function() {
+            console.log("Listening on Port 5000");
+            })
     }catch(err){
         process.exit(1)
     }

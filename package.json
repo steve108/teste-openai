@@ -37,6 +37,7 @@
   },
   "homepage": "https://github.com/steve108/teste-openai#readme",
   "engines": {
-    "node": "20.x"
+    "node": "20.x",
+    "npm": "8.18.0"
   }
 }

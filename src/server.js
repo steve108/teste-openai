@@ -19,8 +19,11 @@ const app = (0, fastify_1.default)({ logger: true });
 const start = () => __awaiter(void 0, void 0, void 0, function* () {
     yield app.register(cors_1.default);
     yield app.register(routes_1.routes);
+    var port = process.env.PORT || 5000;
     try {
-        yield app.listen(process.env.PORT || 5000);
+        yield app.listen(port, "0.0.0.0", function () {
+            console.log("Listening on Port 5000");
+        });
     }
     catch (err) {
         process.exit(1);
