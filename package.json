@@ -1,9 +1,11 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Desafio",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/server.ts",
     "dev": "tsx watch src/server.ts"
   },
   "keywords": [],
@@ -12,6 +14,7 @@
   "devDependencies": {
     "@types/node": "^20.12.7",
     "prisma": "^5.12.1",
+    "tsx": "^4.7.2",
     "typescript": "^5.4.5",
     "var_dump": "^1.0.6"
   },
@@ -21,7 +24,14 @@
     "fastify": "^4.26.2",
     "mongodb": "^6.5.0",
     "openai": "^4.33.1",
-    "tsx": "^4.7.2",
     "validator": "^13.11.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/steve108/teste-openai.git"
+  },
+  "bugs": {
+    "url": "https://github.com/steve108/teste-openai/issues"
+  },
+  "homepage": "https://github.com/steve108/teste-openai#readme"
 }
