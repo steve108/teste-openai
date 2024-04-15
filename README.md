@@ -10,6 +10,7 @@ Desafio
 2 - Crie um arquivo .env na raiz do projeto, com base no arquivo env-example
 
   - DATABASE_URL: é necessária uma conexão com um banco MongoDB, mais detalhes em https://account.mongodb.com/
+    - Para gerar a tabela rode o comando: npx prisma generate 
   - OPENAI_API_KEY: é necessária a criação de uma conta na OpenAI, mais detalhes em https://platform.openai.com/docs/overview
 
 3 - npm init -y
