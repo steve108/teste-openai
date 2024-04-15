@@ -4,9 +4,10 @@
   "description": "Desafio",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
+    "postinstall": "tsc",
     "start": "ts-node src/server.ts",
-    "dev": "tsx watch src/server.ts"
+    "dev": "tsx watch src/server.ts",
+    "production": "node src/server.js"
   },
   "keywords": [],
   "author": "",
@@ -33,5 +34,8 @@
   "bugs": {
     "url": "https://github.com/steve108/teste-openai/issues"
   },
-  "homepage": "https://github.com/steve108/teste-openai#readme"
+  "homepage": "https://github.com/steve108/teste-openai#readme",
+  "engines": {
+    "node": "20.x"
+  }
 }
