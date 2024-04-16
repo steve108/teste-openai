@@ -14,11 +14,11 @@ const OpenAIService_1 = require("../services/OpenAIService");
 class OpenAIController {
     handle(request, reply) {
         return __awaiter(this, void 0, void 0, function* () {
-            const { id_user, pergunta } = request.body;
+            const { id_user, pergunta, tokens } = request.body;
             // console.log(id_user);
             // console.log(pergunta);
             const openaiService = new OpenAIService_1.OpenAiService();
-            const aswer = yield openaiService.execute({ id_user, pergunta });
+            const aswer = yield openaiService.execute({ id_user, pergunta, tokens });
             reply.send(aswer);
         });
     }

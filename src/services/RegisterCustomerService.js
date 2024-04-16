@@ -41,7 +41,7 @@ class RegisterCustomerService {
                     telefone
                 }
             });
-            return { ok: true };
+            return { cliente };
         });
     }
 }

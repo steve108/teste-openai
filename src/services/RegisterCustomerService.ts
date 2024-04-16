@@ -40,7 +40,7 @@ class RegisterCustomerService{
             }
         })
 
-        return { ok: true}
+        return { cliente }
     }
 }
 

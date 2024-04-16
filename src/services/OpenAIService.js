@@ -17,9 +17,15 @@ const prisma_1 = __importDefault(require("../prisma"));
 const openai_1 = __importDefault(require("openai"));
 class OpenAiService {
     execute(_a) {
-        return __awaiter(this, arguments, void 0, function* ({ id_user, pergunta }) {
+        return __awaiter(this, arguments, void 0, function* ({ id_user, pergunta, tokens }) {
+            if (!id_user) {
+                throw new Error("Preencha o id do usuário(id_user)");
+            }
             if (!pergunta) {
-                throw new Error("Preencha o campos pergunta");
+                throw new Error("Preencha o campo pergunta");
+            }
+            if (!tokens) {
+                tokens = 200;
             }
             const openai = new openai_1.default({ apiKey: process.env['OPENAI_API_KEY'] });
             function main() {
@@ -27,7 +33,7 @@ class OpenAiService {
                     const completion = yield openai.completions.create({
                         model: "gpt-3.5-turbo-instruct",
                         prompt: pergunta,
-                        max_tokens: 5,
+                        max_tokens: tokens,
                         temperature: 0,
                     });
                     return completion.choices[0].text;
