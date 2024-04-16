@@ -19,3 +19,5 @@ Desafio
 
 5 - npm run dev
 
+
+Swagger:https://app.swaggerhub.com/apis/STEVE108/OpenAI/1.0.0
